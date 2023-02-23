@@ -21,6 +21,8 @@ def create_app():
     from .routes.main import bp as main_bp
     app.register_blueprint(main_bp, url_prefix='/')
     # products
+    from .routes.main import bp_2 as products_bp
+    app.register_blueprint(products_bp, url_prefix='/products')
 
     # models
     from .models.products import Product
