@@ -1,0 +1,24 @@
+@import url('./header.css');
+
+/* Globals */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+
+    --main: #000E65;
+    --second: #0E6500;
+    --red: #65000E;
+    --white: #FAFAFF;
+    --black: #00020C;
+}
+
+body {
+    background-color: var(--white);
+}
+

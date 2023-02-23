@@ -6,9 +6,16 @@ from ... import db
 
 @main.route('/')
 def index():
-    if request.method == 'GET':
-        for product in Product.query.all():
-            return f'{product.name} | {product.price} | {product.description}'
+    
+    context = {
+        'title': 'Home',
+        'Product': Product
+    }
+
+    return render_template(
+        'index.html',
+        **context
+    )
 
 @main.route('/add', methods=['POST', 'GET'])
 def add():
@@ -35,5 +42,35 @@ def add():
 
     return render_template(
         'add.html',
+        **context
+    )
+
+# 
+@main.route('/<int:id>/delete', methods=['DELETE', 'GET'])
+def delete_product(id):
+    record = Product.query.filter_by(id=id).first()
+    db.session.delete(record)
+    db.session.commit()
+
+    return redirect(url_for('main.index'))
+
+@main.route('/<int:id>/edit/', methods=['GET', 'PUT'])
+def edit_record(id):
+    record = Product.query.filter_by(id=id).first()
+    if request.method == 'PUT':
+
+        record.name = request.form.get('name')
+        record.price = request.form.get('price')
+        record.description = request.form.get('description')
+
+
+    context = {
+        'title': 'Edit Data',
+        'id': id,
+        'record': record
+    }
+
+    return render_template(
+        'edit.html',
         **context
     )

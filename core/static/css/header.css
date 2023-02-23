@@ -1,0 +1,27 @@
+.header {
+    background-color: var(--main);
+    color: var(--white);
+
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+
+.header__nav-items {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    list-style-type: none;
+}
+
+.header__nav-link {
+    padding: 1rem 4rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 200ms linear;
+    letter-spacing: 0.1rem;
+} .header__nav-link:hover {
+    background: var(--second);
+    border-bottom: 1px solid var(--white);
+}
