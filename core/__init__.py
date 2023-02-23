@@ -11,13 +11,19 @@ def create_app():
     app.config.from_pyfile('../config.py')
     db.init_app(app)
     
+    # test route
     @app.route('/test')
     def test():
         return 'Success'
 
-    # views
+    # === blueprints ===
+    # main
+    from .routes.main import bp as main_bp
+    app.register_blueprint(main_bp, url_prefix='/')
+    # products
 
     # models
+    from .models.products import Product
 
     create_database(app)
     
