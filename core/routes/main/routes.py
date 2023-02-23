@@ -17,6 +17,19 @@ def index():
         **context
     )
 
+@main.route('/about')
+def about():
+    
+    context = {
+        'title': 'Home',
+        'Product': Product
+    }
+
+    return render_template(
+        'about.html',
+        **context
+    )
+
 @main.route('/add/', methods=['POST', 'GET'])
 def add():
     if request.method == 'POST':
