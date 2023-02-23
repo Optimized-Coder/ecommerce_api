@@ -4,7 +4,7 @@
     <main class="main">
         {% include 'includes/genre_list.html' %}
         <section class="main__products">
-            {% for record in Product.query.order_by(Product.id).all() %}
+            {% for record in records %}
             <div class="product__card">
                 <p>
                     {{record.title}}
