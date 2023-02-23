@@ -1,7 +1,9 @@
 <ul class="genre__list">
     {% for genre in genres %}
-        <li class="genre__list-item">
-            {{ genre }}
-        </li>
+        <a href="#" class="genre__link">
+            <li class="genre__list-item">
+                {{ genre }}
+            </li>
+        </a>
     {% endfor %}
 </ul>

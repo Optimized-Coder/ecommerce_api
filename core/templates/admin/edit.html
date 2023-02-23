@@ -1,0 +1,12 @@
+{% extends "admin/base_admin.html" %}
+
+{% block main %}
+{% include 'admin/admin_includes/product_form.html' %}
+<div>
+    <p>Title: {{record.title}} </p>
+    <p>Author: {{record.author}} </p>
+    <p>genre: {{record.genre}} </p>
+    <p>Price: {{record.price}} </p>
+    <p>Description: {{record.description}} </p>
+</div>
+{% endblock %}

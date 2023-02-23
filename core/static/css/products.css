@@ -11,10 +11,17 @@
 .genre__list {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .genre__list-item {
     list-style-type: none;
+}
+
+.genre__link {
+    color: black;
+    padding: 1rem 3rem;
+} .genre__link:hover {
+    background-color:#ddd;
 }

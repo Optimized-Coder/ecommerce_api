@@ -1,0 +1,18 @@
+.product__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.input__field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.product__form-input {
+    margin: 1rem 1rem;
+}

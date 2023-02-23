@@ -23,3 +23,4 @@ def index():
         'product_list.html',
         **context
     )
+

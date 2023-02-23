@@ -45,7 +45,7 @@ def add():
     }
 
     return render_template(
-        'add.html',
+        'admin/add.html',
         **context
     )
 
@@ -77,6 +77,6 @@ def edit_record(id):
     }
 
     return render_template(
-        'edit.html',
+        'admin/edit.html',
         **context
     )
