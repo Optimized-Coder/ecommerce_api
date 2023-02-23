@@ -1,1 +1,25 @@
 {% extends 'base.html' %}
+
+{% block main %}
+    <main class="main">
+        {% include 'includes/genre_list.html' %}
+        <section class="main__products">
+            {% for record in Product.query.order_by(Product.id).all() %}
+            <div class="product__card">
+                <p>
+                    {{record.title}}
+                </p>
+                <p>
+                    {{record.author}}
+                </p>
+                <p>
+                    {{record.genre}}
+                </p>
+                <p>
+                    £{{record.price}}
+                </p>
+            </div>
+        {% endfor %}
+        </section>
+    </main>
+{% endblock %}

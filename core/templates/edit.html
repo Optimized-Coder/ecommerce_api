@@ -9,12 +9,18 @@
     </title>
 </head>
 <body>
-    <form action="" method="PUT">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
+    <form action="" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+        
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author">
         
         <label for="price">Price:</label>
-        <input type="number" name="price" id="price">
+        <input type="text" name="price" id="price">
+        
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre">
 
         <label for="description">Product Description:</label>
         <input type="text" name="description" id="description">
@@ -22,7 +28,9 @@
         <input type="submit">
     </form>
     <div>
-        <p>Name: {{record.name}} </p>
+        <p>Title: {{record.title}} </p>
+        <p>Author: {{record.author}} </p>
+        <p>genre: {{record.genre}} </p>
         <p>Price: {{record.price}} </p>
         <p>Description: {{record.description}} </p>
     </div>

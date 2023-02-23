@@ -1,0 +1,20 @@
+.main {
+    padding: 1rem 3rem;
+}
+
+
+.product__card {
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--black);
+}
+
+.genre__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.genre__list-item {
+    list-style-type: none;
+}
