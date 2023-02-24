@@ -6,10 +6,14 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
+    align-content: center; */
     border-bottom: 1px solid var(--black);
-    padding: 0rem 2rem;
+    /* padding: 0rem 2rem; */
     transition: all 200ms;
+    overflow-x: scroll;
 }
 
 .genre__list-item {
@@ -26,10 +30,18 @@
 
 .product__card {
     display: grid;
-    grid-template-columns: 40% 30% 30% 10%;
+    grid-template-columns: 30% 20% 20% 10% 20%;
 
     margin: 0 6rem;
     padding: 2rem 3rem 1rem;
     border-bottom: 1px solid var(--black);
+}
+
+.view_more {
+    text-align: center;
+    cursor: pointer;
+} .view_more:hover {
+    color: var(--second);
+    text-decoration: underline;
 }
 
