@@ -1,18 +1,15 @@
-.main {
-    padding: 1rem 3rem;
-}
-
-
-.product__card {
-    padding-top: 1rem;
-    border-bottom: 1px solid var(--black);
-}
+/* .main {
+    padding: 1rem 0rem;
+} */
 
 .genre__list {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    border-bottom: 1px solid var(--black);
+    padding: 0rem 2rem;
+    transition: all 200ms;
 }
 
 .genre__list-item {
@@ -22,6 +19,17 @@
 .genre__link {
     color: black;
     padding: 1rem 3rem;
+
 } .genre__link:hover {
     background-color:#ddd;
 }
+
+.product__card {
+    display: grid;
+    grid-template-columns: 40% 30% 30% 10%;
+
+    margin: 0 6rem;
+    padding: 2rem 3rem 1rem;
+    border-bottom: 1px solid var(--black);
+}
+

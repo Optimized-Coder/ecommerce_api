@@ -5,20 +5,7 @@
         {% include 'includes/genre_list.html' %}
         <section class="main__products">
             {% for record in records %}
-            <div class="product__card">
-                <p>
-                    {{record.title}}
-                </p>
-                <p>
-                    {{record.author}}
-                </p>
-                <p>
-                    {{record.genre}}
-                </p>
-                <p>
-                    £{{record.price}}
-                </p>
-            </div>
+            {% include 'includes/product_card.html' %}
         {% endfor %}
         </section>
     </main>

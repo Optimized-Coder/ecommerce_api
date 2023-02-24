@@ -1,6 +1,6 @@
 <ul class="genre__list">
     {% for genre in genres %}
-        <a href="#" class="genre__link">
+        <a href="{{url_for('products.by_genre', genre_tag=genre)}}" class="genre__link">
             <li class="genre__list-item">
                 {{ genre }}
             </li>
