@@ -8,7 +8,10 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_pyfile('../config.py')
+    # app.config.from_pyfile('../config.py')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    # postgres://ecommerce_api_products_user:pn1snLX3wCYeDUEyygL9JhCb6UR3d0nX@dpg-cft0221a6gdotccftgfg-a.frankfurt-postgres.render.com/ecommerce_api_products
+
     db.init_app(app)
     
     # test route
