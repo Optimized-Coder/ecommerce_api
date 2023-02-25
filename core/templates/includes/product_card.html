@@ -12,6 +12,6 @@
         £{{record.price}}
     </p>
     <div class="view_more">
-        <a>View More</a>
+        <a href="{{url_for('products.product_details', id=record.id)}}">View More</a>
     </div>
 </div>

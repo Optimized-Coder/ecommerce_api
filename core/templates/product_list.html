@@ -5,9 +5,12 @@
         {% include 'includes/genre_list.html' %}
         <section class="main__products">
             <form action="" class="filter" method="get">
+                <label for="sort">Sort Products</label>
                 <select name="sort" id="sort">
-                    <option value="title">Title</option>
-                    <option value="price">Price</option>
+                    <option value="title">Title (A-Z)</option>
+                    <option value="price">Price (1-9)</option>
+                    <option value="author">Author (A-Z)</option>
+                    <option value="genre">Genre (A-Z)</option>
                 </select>
                 <input type="submit">
             </form>

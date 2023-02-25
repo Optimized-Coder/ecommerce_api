@@ -48,11 +48,29 @@ def by_genre(genre_tag):
         .order_by(sort)
         .filter_by(genre=genre_tag.title())
         .all(),
-        'genres': genres
+        'genres': genres,
     }
 
     return render_template(
         'product_list.html',
+        **context
+    )
+
+@product.route('/<int:id>/details')
+def product_details(id):
+    all_products = Product.query.filter(id == id).all()
+
+    for single_product in all_products:
+        if single_product.id == id:
+            product = single_product
+
+    context = {
+        'product': product,
+        'title': product.title,
+    }
+
+    return render_template(
+        'product_details.html',
         **context
     )
 
